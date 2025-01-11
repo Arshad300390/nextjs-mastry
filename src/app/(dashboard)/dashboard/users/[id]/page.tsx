@@ -1,12 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-const page =async ({params}:{params: {id: string}}) => {
-    const {id} = params;
-  return (
-    <div>
-        <div>user {id}</div>
-    </div>
-  )
+interface PageProps {
+  params: {
+    id: string;
+  };
 }
 
-export default page
+const Page = async ({ params }: PageProps) => {
+  const { id } = params; // Correctly destructure `id` from `params`
+  return (
+    <div>
+      <div>User: {id}</div>
+    </div>
+  );
+};
+
+export default Page;
