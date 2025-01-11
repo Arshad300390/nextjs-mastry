@@ -6,8 +6,9 @@ interface PageProps {
   };
 }
 
-const Page = async ({ params }: PageProps) => {
-  const { id } = params; // Correctly destructure `id` from `params`
+const Page = ({ params }: PageProps) => {
+  const { id } = params;
+
   return (
     <div>
       <div>User: {id}</div>
