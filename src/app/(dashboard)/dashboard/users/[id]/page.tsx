@@ -1,13 +1,15 @@
 import React from 'react';
 
+// Define PageProps type with an awaited params
 interface PageProps {
   params: {
     id: string;
   };
 }
 
-const Page = ({ params }: PageProps) => {
-  const { id } = params;
+const Page = async ({ params }: PageProps) => {
+  // Await params before accessing its properties
+  const { id } = await params; // Awaiting params
 
   return (
     <div>
