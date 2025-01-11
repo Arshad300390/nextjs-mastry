@@ -1,5 +1,4 @@
 import books from "@/app/api/db";
-import { NextRequest } from "next/server";
 export async function DELETE(req: Request, {params}:{params: {id: string}}){
     const {id} =await params;
     const bookId = parseInt(id, 10);

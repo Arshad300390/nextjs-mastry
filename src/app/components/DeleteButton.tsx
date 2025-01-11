@@ -14,7 +14,7 @@ const DeleteButton = ({bookId}:{bookId:number}) => {
                 router.refresh();
             }
         } catch (error) {
-            
+            console.log('error is', error);
         }
     }
   return (
