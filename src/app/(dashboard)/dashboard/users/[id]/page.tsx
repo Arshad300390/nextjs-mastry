@@ -1,7 +1,6 @@
-import React from 'react';
-const Page = async ({ params }: { params: { id: string } }) => {
-  // Await params before accessing its properties
-  const { id } = await params; // Awaiting params
+import React,{use} from 'react';
+const Page = ({params}: {params: Promise<{ id: string }>}) => {
+  const { id } = use(params);
 
   return (
     <div>
